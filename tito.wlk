@@ -1,3 +1,4 @@
+import bebidas.*
 object tito {
   const momento = self.peso() * 7 //KG x M/S
 
@@ -7,6 +8,8 @@ object tito {
 
   var efecto = "Sano"
 
+  method estado() = efecto
+
   method peso() = 70
 
   method consumir(cantidad, bebida){
@@ -15,7 +18,7 @@ object tito {
     efecto = bebida.efecto()
   }
 
-  method rendimientoFinal() = bebidaTomada.rendimientoTomado_(
+  method rendimientoFinal() = bebidaTomada.rendimientoTomando_(
     cantidadBebida)
 
   method velocidad() = self.rendimientoFinal() * momento / self.peso()

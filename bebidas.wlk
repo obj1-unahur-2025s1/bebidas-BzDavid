@@ -10,9 +10,7 @@ object whiskey {
 object terere {
     const rendimientoBase = 0.1
     
-    method rendimientoTomando_(cm3Atomar){
-        1.max(rendimientoBase * cm3Atomar)
-    }
+    method rendimientoTomando_(cm3Atomar) = 1.max(rendimientoBase * cm3Atomar)
 
     method efecto() = "Estimulado y con ganas de hacer cosas"
   

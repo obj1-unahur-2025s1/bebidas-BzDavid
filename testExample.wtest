@@ -1,2 +1,21 @@
 import tito.tito
 import bebidas.*
+
+describe "Testeando a Tito" {
+  test "Toma whiskey" {
+    tito.consumir(100, whiskey)
+    assert.equals("Somnoliento, mareado y con jaquecas", tito.estado())
+    assert.notEquals(0, tito.velocidad())
+  }
+  test "Toma terere" {
+    tito.consumir(100, terere)
+    assert.equals("Estimulado y con ganas de hacer cosas", tito.estado())
+    assert.notEquals(0, tito.velocidad())
+  }
+  test "Toma cianuro" {
+    tito.consumir(100, cianuro)
+    assert.equals("Casi muerto", tito.estado())
+    assert.equals(0, tito.velocidad())
+  }
+}
+
